@@ -1,0 +1,18 @@
+<html>
+<body>
+<div id="captcha-box"></div>
+<script src="https://api.geetest.com/get.php"></script>
+<script>
+    var captchaObj = new Geetest({
+        gt: "0f952b4dac90c9d279a11b4739eedddb",
+        product: "embed",
+        lang: "zh-cn"
+    });
+    captchaObj.appendTo("#captcha-box");
+    captchaObj.onSuccess(function () {
+        location.href="{{murl}}";
+    });
+    captchaObj.getValidate();
+</script>
+</body>
+</html>
